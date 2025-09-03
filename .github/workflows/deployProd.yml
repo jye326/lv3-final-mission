@@ -1,14 +1,14 @@
-# .github/workflows/deployDev.yml
-name: Deploy-Dev (self-hosted)
+# .github/workflows/deployProd.yml
+name: Deploy-Prod (self-hosted)
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: [ self-hosted, Linux, ARM64, dev ]
+    runs-on: [ self-hosted, Linux, ARM64 ]
     steps:
       - name: Run deploy
         run: |
